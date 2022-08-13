@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "f9923e6c3ca5b1fd",
+        "type": "tab",
+        "label": "Flow 11",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c254251c2f9a4be3",
         "type": "debug",
         "z": "1fd03a1668bf9815",
@@ -19,8 +27,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 240,
+        "x": 660,
+        "y": 160,
         "wires": []
     },
     {
@@ -44,11 +52,57 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 100,
+        "x": 320,
+        "y": 400,
         "wires": [
             [
                 "c254251c2f9a4be3"
+            ]
+        ]
+    },
+    {
+        "id": "d11e968f9111599c",
+        "type": "yaml",
+        "z": "f9923e6c3ca5b1fd",
+        "property": "payload",
+        "name": "",
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "1a19e2cafa6be5bd"
+            ]
+        ]
+    },
+    {
+        "id": "1a19e2cafa6be5bd",
+        "type": "file",
+        "z": "f9923e6c3ca5b1fd",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 560,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72aabf1642555f97",
+        "type": "watch",
+        "z": "f9923e6c3ca5b1fd",
+        "name": "",
+        "files": "",
+        "recursive": "",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "d11e968f9111599c"
             ]
         ]
     }
