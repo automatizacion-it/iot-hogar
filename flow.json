@@ -16,6 +16,46 @@
         "env": []
     },
     {
+        "id": "9e7d05e844fc0b5a",
+        "type": "tab",
+        "label": "Flow 12",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98fe79cd0741e3e5",
+        "type": "tab",
+        "label": "Flow 13",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "17c1db2d45ef187e",
+        "type": "tab",
+        "label": "Flow 14",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3bcd2231de233680",
+        "type": "tab",
+        "label": "Flow 15",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6d5ef2bc9dfabc01",
+        "type": "tab",
+        "label": "Flow 16",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "c254251c2f9a4be3",
         "type": "debug",
         "z": "1fd03a1668bf9815",
@@ -104,6 +144,263 @@
             [
                 "d11e968f9111599c"
             ]
+        ]
+    },
+    {
+        "id": "ee4a4328e0037b99",
+        "type": "ui_button",
+        "z": "9e7d05e844fc0b5a",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "913049cf61845b0f"
+            ]
+        ]
+    },
+    {
+        "id": "913049cf61845b0f",
+        "type": "ui_dropdown",
+        "z": "9e7d05e844fc0b5a",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "value": "",
+                "label": ""
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 500,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b03352672238b8d1",
+        "type": "ui_text",
+        "z": "98fe79cd0741e3e5",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 490,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "737b322b171d14bb",
+        "type": "ui_chart",
+        "z": "98fe79cd0741e3e5",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "b03352672238b8d1"
+            ]
+        ]
+    },
+    {
+        "id": "ed329ce52d04fd3e",
+        "type": "rpi-gpio in",
+        "z": "98fe79cd0741e3e5",
+        "name": "",
+        "pin": "",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "de702309d1d70d63"
+            ]
+        ]
+    },
+    {
+        "id": "de702309d1d70d63",
+        "type": "rpi-gpio out",
+        "z": "98fe79cd0741e3e5",
+        "name": "",
+        "pin": "",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 610,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "45fefa08113ff5d0",
+        "type": "ui_audio",
+        "z": "17c1db2d45ef187e",
+        "name": "",
+        "voice": "",
+        "always": "",
+        "x": 460,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4a05464140b75da8",
+        "type": "ui_chart",
+        "z": "17c1db2d45ef187e",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1F77B4",
+            "#AEC7E8",
+            "#FF7F0E",
+            "#2CA02C",
+            "#98DF8A",
+            "#D62728",
+            "#FF9896",
+            "#9467BD",
+            "#C5B0D5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "45fefa08113ff5d0"
+            ]
+        ]
+    },
+    {
+        "id": "6d9304071cf25785",
+        "type": "csv",
+        "z": "17c1db2d45ef187e",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "45fefa08113ff5d0"
+            ]
+        ]
+    },
+    {
+        "id": "2965f821552f2528",
+        "type": "link in",
+        "z": "6d5ef2bc9dfabc01",
+        "name": "link in 1",
+        "links": [],
+        "x": 195,
+        "y": 140,
+        "wires": [
+            [
+                "d9cadc38627b4fa8"
+            ]
+        ]
+    },
+    {
+        "id": "d9cadc38627b4fa8",
+        "type": "link call",
+        "z": "6d5ef2bc9dfabc01",
+        "name": "",
+        "links": [],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            []
         ]
     }
 ]
